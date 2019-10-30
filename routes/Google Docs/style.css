@@ -1,0 +1,202 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    -webkit-user-select: none;
+    /* Chrome Todos / Safari Todos */
+    -moz-user-select: none;
+    /* Firefox Todos */
+    -ms-user-select: none;
+    /* IE 10+ */
+    -o-user-select: none;
+    user-select: none;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #f8f9fa;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+header h1{
+    font-size: 1.5em;
+    padding: 20px;
+    background: #fff;
+    border-bottom: 1px solid #dadce0;
+}
+
+header span{
+    position: absolute;
+    top: 20px;
+    left: 120px;
+    font-size: 1.1em;
+}
+
+.code{
+    background-color: rgb(255, 255, 255);
+    max-width: 794px;
+    max-height: 800px;
+    height: 500px;
+    box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin: 0px auto;
+    padding: 20px;
+    top: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.final{
+    position: absolute;
+    right: 0px;
+    width: 12px;
+    height: 12px;
+    background: rgba(60, 64, 67, 0.15);
+    border-radius: 1px 2px 20px 20px 2px;
+    box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.code span{
+    display: inline-block;
+    padding: 0px;
+    margin-left: 1.5px;
+    position: relative;
+    left: 4px;
+    top: 40px;
+    margin-top: 0px;
+    cursor: text;
+}
+
+.tools{
+    position: relative;
+    background: #fff;
+    width: 100%;
+    height: 40px;
+    top: 0px;
+    border-bottom: 1px solid #dadce0;
+    padding: 10px;
+}
+
+.tools i{
+    margin-left: 10px;
+    cursor: pointer;
+    top: -17px;
+    left: -20px;
+}
+
+.where{
+    position: absolute;
+    width: 2px;
+    height: 14px;
+    background: #000000f5;
+    top: 6px;
+    left: 10px;
+    -moz-animation: fadeinphoto 0.5s 0.5s infinite;
+    -webkit-animation: fadeinphoto 0.5s 0.5s infinite;
+         -o-animation: fadeinphoto 0.5s 0.5s infinite;
+            animation: fadeinphoto 0.5s 0.5s infinite;
+}
+
+@keyframes fadeinphoto {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.dark{
+    background: #151515 !important;
+}
+
+.dark{
+    color: #fff;
+}
+
+.dark header{
+    background: rgba(0,0,0,.40);
+    color: #fff;
+}
+
+.dark .tools{
+    background: transparent;
+}
+
+.dark h1{
+    color: #fff;
+}
+
+.dark header h1{
+    background: #151515;
+    color: #fff;
+}
+
+.dark #papel{
+    background: rgba(0,0,0,.40);
+}
+
+.dark .where{
+    background: #fff;
+}
+
+.light .tools i{
+    color: #151515 !important;
+}
+
+.dark header span{
+    color: #fff;
+}
+
+.dark header{
+  background: #151515;
+}
+
+header{
+  background: #fff;
+}
+
+header input{
+  position: absolute;
+  background: #fff;
+  color: #fff;
+  border: none;
+  top: 10px;
+  left: 110px;
+  padding: 10px;
+  outline: none;
+  color: #151515;
+  z-index: 100;
+  font-size: 1.1em;
+  background: #f1f1f1;
+  border-radius: 40px;
+  box-shadow: rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+header input::placeholder{
+  color: #151515;
+}
+
+.dark header input{
+  background: #151515;
+}
+
+.tools i{
+    position: relative;
+    top: -10px;
+    left: 20px;
+}
+
+.tools select{
+    margin-left: 20px;
+    left: 20px;
+    border: none;
+    padding: 4px;
+    outline: none;
+    position: relative;
+    top: -10px;
+}
+
+.tools option{
+    outline: none;
+}
