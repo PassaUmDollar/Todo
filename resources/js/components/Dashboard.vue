@@ -152,7 +152,7 @@
 </style>
 
 <template>
-    <div id="app">
+<div>
     <header>
             <div class="right">
                 <div class="avatar">

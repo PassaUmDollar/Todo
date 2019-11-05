@@ -7,6 +7,8 @@ import Routes from '@/js/routes.js';
 // Component File
 import App from '@/js/views/App';
 
+const axios = require('axios');
+
 
 const app = new Vue({
   el: '#app',
