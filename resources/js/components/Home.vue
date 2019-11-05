@@ -138,6 +138,7 @@
         font-weight: bold;
         top: 20px;
         position: relative;
+        font-size: 14px;
     }
 
     header .right{

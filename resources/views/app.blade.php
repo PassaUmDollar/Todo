@@ -67,6 +67,10 @@
             margin: 20px;
         }
 
+        button,a{
+        cursor: pointer;
+        }
+
         </style>
 
     </body>

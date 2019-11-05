@@ -84,6 +84,10 @@
             width: 100%;
         }
     }
+
+    header a{
+        font-size: 14px;
+    }
 </style>
 
 <template>

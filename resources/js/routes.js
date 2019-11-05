@@ -5,6 +5,7 @@ import VueRouter from 'vue-router';
 import Home from '@/js/components/Home';
 import Register from '@/js/components/Register';
 import Login from '@/js/components/Login';
+import Dashboard from '@/js/components/Dashboard';
 
 Vue.use(VueRouter);
 
@@ -25,6 +26,11 @@ const router = new VueRouter({
             path: '/register',
             name: 'register',
             component: Register
+        },
+        {
+            path: '/dashboard',
+            name: 'Dashboard',
+            component: Dashboard
         },
     ]
 });
