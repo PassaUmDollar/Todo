@@ -123,7 +123,7 @@
         }
 
         header input{
-            width: 49% !important;
+            width: 45% !important;
             left: -6px !important;
             top: -26px !important;
         }
@@ -313,7 +313,7 @@
             <span>{{ card.name }}</span>
         </div>
         <br>
-        <span style="font-size: 1.6em; padding: 10px;" v-if="cards.length == 0">
+        <span style="font-size: 1.6em; padding: 0px;" v-if="cards.length == 0">
             Nenhum card :/, crie um agora    
         </span>  
     </div>
