@@ -311,7 +311,11 @@
         <h1>Seus cards</h1>
         <div class="card blue" v-for="card in cards" v-bind:class="card.color">
             <span>{{ card.name }}</span>
-        </div>  
+        </div>
+        <br>
+        <span style="font-size: 1.6em; padding: 10px;" v-if="cards.length == 0">
+            Nenhum card :/, crie um agora    
+        </span>  
     </div>
 
     <div class="overlay" v-if="criando">
@@ -338,10 +342,7 @@ export default{
             "password": "xande123"
             },
             criando: false,
-            cards: [
-                {"name" : "Card One", "color": "blue"},
-                {"name" : "Card Two", "color": "green"},
-                {"name" : "Card Three", "color": "red"},
+            cards: [  
             ],
             criandoCard: {"name" : "", "color": "red"},
             cores: [

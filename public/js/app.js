@@ -2168,6 +2168,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2177,16 +2181,7 @@ __webpack_require__.r(__webpack_exports__);
         "password": "xande123"
       },
       criando: false,
-      cards: [{
-        "name": "Card One",
-        "color": "blue"
-      }, {
-        "name": "Card Two",
-        "color": "green"
-      }, {
-        "name": "Card Three",
-        "color": "red"
-      }],
+      cards: [],
       criandoCard: {
         "name": "",
         "color": "red"
@@ -20699,7 +20694,21 @@ var render = function() {
           return _c("div", { staticClass: "card blue", class: card.color }, [
             _c("span", [_vm._v(_vm._s(card.name))])
           ])
-        })
+        }),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _vm.cards.length == 0
+          ? _c(
+              "span",
+              { staticStyle: { "font-size": "1.6em", padding: "10px" } },
+              [
+                _vm._v(
+                  "\r\n            Nenhum card :/, crie um agora    \r\n        "
+                )
+              ]
+            )
+          : _vm._e()
       ],
       2
     ),
