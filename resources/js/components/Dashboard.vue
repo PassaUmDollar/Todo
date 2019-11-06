@@ -108,6 +108,11 @@
             width: 100%;
             height: 100%;
         }
+
+        .tuto1{
+            top: 7vw !important;
+            left: 11vw !important;
+        }
     }
 
     @media screen and (max-width: 610px){
@@ -130,6 +135,18 @@
 
         header .right{
             right: 11px !important;
+        }
+
+        .tuto1{
+            top: 16vw !important;
+            left: 2vw !important;
+        }
+    }
+
+    @media screen and (max-width: 587px){
+        .tuto1{
+            top: 9vw !important;
+            left: 3vw !important;
         }
     }
 
@@ -229,7 +246,6 @@
         width: 70%;
         left: 50%;
         transform: translate(-50%);
-        background: red;
         padding: 10px;
         font-size: 18px;
         margin-top: 5px;
@@ -283,6 +299,63 @@
     .error{
         border: 2px solid var(--red);
     }
+
+    .overlay_trans{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 5000;
+        background: transparent;
+        top: 0%;
+    }
+
+    .tuto{
+        position: absolute;
+        width: 150px;
+        height: auto;
+        background: #fdf5ec;
+        box-shadow: -5px -1px 30px 21px rgba(95, 91, 91, 0.24);
+        borde-radius: 4px;
+        padding: 13px;
+        transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .tuto1{
+        left: 11vw;
+        top: 5vw;
+    }
+
+    .tring{
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid #fdf5ec;
+        position: absolute;
+        top: -15px;
+        left: 40%;
+    }
+
+    .tuto button{
+        background: #0079bf;
+        color: #fff;
+        position: relative;
+        -webkit-animation: shadow-pulse-data-v-040e2ab9 1s infinite;
+        animation: shadow-pulse-data-v-040e2ab9 1s infinite;
+        top: 25px;
+    }
+
+    .tuto2{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .tuto3{
+        top: 130px;
+        right: 56px;
+        transform: translate(-50%, -50%);
+    }
 </style>
 
 <template>
@@ -329,6 +402,14 @@
         </div>
     </div>
 
+    <div class="overlay_trans" v-if="tuturials.length > 0">
+        <div class="tuto" v-bind:class="'tuto'+whereTuto">
+            <div class="tring"></div>
+            <span style="position: relative; text-align: center;">{{ tuto.texto }}</span>
+            <button @click="nextTuto">OK</button>
+        </div>
+    </div>
+
 </div>
 </template>
 
@@ -350,7 +431,14 @@ export default{
                 {"cor" : "blue", "ativo": false},
                 {"cor" : "green", "ativo": false}
             ],
-            hasError: false
+            hasError: false,
+            tuturials: [
+                {"texto" : "Aqui é a barra de pesquisa :D"},
+                {"texto" : "Aqui são os seus cards :D"},
+                {"texto" : "Aqui é o seu perfil :D"},
+            ],
+            tuto: {"texto" : "Aqui é a barra de pesquisa :D"},
+            whereTuto: 1
         }
     },
     mounted(){
@@ -383,6 +471,11 @@ export default{
                 this.cores[i].ativo = false
             }
             this.cores[index].ativo = true
+        },
+        nextTuto(){
+            this.tuturials.splice(0, 1);
+            this.tuto.texto = this.tuturials[0].texto
+            this.whereTuto++;
         }
     }
 }

@@ -2172,6 +2172,87 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2196,7 +2277,18 @@ __webpack_require__.r(__webpack_exports__);
         "cor": "green",
         "ativo": false
       }],
-      hasError: false
+      hasError: false,
+      tuturials: [{
+        "texto": "Aqui é a barra de pesquisa :D"
+      }, {
+        "texto": "Aqui são os seus cards :D"
+      }, {
+        "texto": "Aqui é o seu perfil :D"
+      }],
+      tuto: {
+        "texto": "Aqui é a barra de pesquisa :D"
+      },
+      whereTuto: 1
     };
   },
   mounted: function mounted() {
@@ -2231,6 +2323,11 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       this.cores[index].ativo = true;
+    },
+    nextTuto: function nextTuto() {
+      this.tuturials.splice(0, 1);
+      this.tuto.texto = this.tuturials[0].texto;
+      this.whereTuto++;
     }
   }
 });
@@ -2268,7 +2365,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nbody[data-v-040e2ab9], html[data-v-040e2ab9]{\n    overflow-x: hidden;\n    overflow-y: auto;\n}\nheader[data-v-040e2ab9]{\n    position: fixed;\n    width: 100%;\n    background: #0079bf;\n    z-index: 4000;\n    box-shadow: 2px 1px 3px rgba(0,0,0,.40);\n    color: #fff;\n    height: 60px;\n}\nheader a[data-v-040e2ab9]{\n    text-decoration: none;\n    font-weight: bold;\n    top: 20px;\n    position: relative;\n}\nheader .right[data-v-040e2ab9]{\n    float: right;\n    position: absolute;\n    right: 50px\n}\n.center[data-v-040e2ab9]{\n    position: relative;\n    margin: 0px auto;\n    max-width: 800px;\n    padding: 30px;\n    top: 80px;\n    height: 100%;\n}\n.card[data-v-040e2ab9]{\n    width: calc(33.33% - 43px);\n    background: #fff;\n    display: inline-block;\n    height: 160px;\n    margin: 20px;\n    box-shadow: -7px 6px 17px 6px rgba(95, 91, 91, 0.24);\n    border-radius: 4px;\n    cursor: pointer;\n    -webkit-transition: 0.4s cubic-bezier(0.6, -0.28, 0.74, 0.05);\n    transition: 0.4s cubic-bezier(0.6, -0.28, 0.74, 0.05);\n}\n.card h1[data-v-040e2ab9]{\n    -webkit-transition: 0.3s !important;\n    transition: 0.3s !important;\n}\n.dog[data-v-040e2ab9]{\n    background: #fdf5ec;\n    overflow: hidden;\n}\n.card h2[data-v-040e2ab9]{\n    position: relative;\n    left: 50%;\n    color: #000000;\n    top: 50%;\n    background: #ffffff85;\n    width: 100%;\n    text-align: center;\n    -webkit-transform: translate(-50%);\n    transform: translate(-50%);\n    z-index: 5;\n    padding: 30px;\n    font-size: 16px;\n}\n.card img[data-v-040e2ab9]{\n    width: 100%;\n}\n.center h1[data-v-040e2ab9]{\n    padding: 10px;\n}\n.card h1[data-v-040e2ab9]{\n    position: absolute;\n    padding: 6.3% 11%;\n    font-size: 322%;\n}\n.card[data-v-040e2ab9]:hover{\n    box-shadow: -5px -1px 30px 21px rgba(95, 91, 91, 0.24);\n    -webkit-transform: scale(1.1) translateY(-10px);\n            transform: scale(1.1) translateY(-10px);\n}\n@media screen and (max-width: 800px){\n.card[data-v-040e2ab9]{\n       width: calc(50% - 43px);\n       position: relative;\n       left: -20px;\n}\n.card h1[data-v-040e2ab9]{\n        padding: 50px 104px;\n}\n.popup[data-v-040e2ab9]{\n        width: 100%;\n        height: 100%;\n}\n}\n@media screen and (max-width: 610px){\n.card[data-v-040e2ab9]{\n       width: 100%;\n       position: relative;\n       left: -20px;\n}\n.card h1[data-v-040e2ab9]{\n    position: relative;\n    text-align: center;\n}\nheader input[data-v-040e2ab9]{\n        width: 45% !important;\n        left: -6px !important;\n        top: -26px !important;\n}\nheader .right[data-v-040e2ab9]{\n        right: 11px !important;\n}\n}\n.blue[data-v-040e2ab9]{\n    background: #0079bf;\n}\n.green[data-v-040e2ab9]{\n    background: #6dbf00;\n}\n.red[data-v-040e2ab9]{\n    background: #bf0023;\n}\n.avatar[data-v-040e2ab9]{\n    background: #6dbf00;\n    width: 50px;\n    height: 50px;\n    border-radius: 50%;\n    position: absolute;\n    right: 130px;\n    top: 5px;\n    -webkit-transform: scale(0.8);\n            transform: scale(0.8);\n    cursor: pointer;\n}\n.avatar span[data-v-040e2ab9]{\n    padding: 12px 15px;\n    top: 10px;\n    position: relative;\n    font-size: 166%;\n    font-weight: bold;\n}\n.overlay[data-v-040e2ab9]{\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    z-index: 5000;\n    background: rgba(0,0,0,.40);\n    top: 0%;\n}\n.popup[data-v-040e2ab9]{\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    position: absolute;\n    background: #fff;\n    padding: 40px;\n    box-shadow: -5px -1px 30px 21px rgba(95, 91, 91, 0.24);\n    animation: leaves-data-v-040e2ab9 5s ease-in-out alternate;\n    -webkit-animation: leaves-data-v-040e2ab9 0.4s ease-in-out alternate;\n}\n@-webkit-keyframes shadow-pulse-data-v-040e2ab9\n{\n0% {\n        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);\n}\n100% {\n        box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);\n}\n}\n@keyframes shadow-pulse-data-v-040e2ab9\n{\n0% {\n        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);\n}\n100% {\n        box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);\n}\n}\n@-webkit-keyframes leaves-data-v-040e2ab9 {\n0% {\n        -webkit-transform: translate(-50%, -50%) scale(0);\n                transform: translate(-50%, -50%) scale(0);\n}\n100% {\n        -webkit-transform: translate(-50%, -50%) scale(1);\n                transform: translate(-50%, -50%) scale(1);\n}\n}\n@keyframes leaves-data-v-040e2ab9 {\n0% {\n        -webkit-transform: translate(-50%, -50%) scale(0);\n                transform: translate(-50%, -50%) scale(0);\n}\n100% {\n        -webkit-transform: translate(-50%, -50%) scale(1);\n                transform: translate(-50%, -50%) scale(1);\n}\n}\ninput[data-v-040e2ab9]{\n    width: 100%;\n    background: rgba(0,0,0,.40);\n    padding: 15px;\n    position: relative;\n    margin: 0px;\n    border-radius: 5px;\n    outline: none;\n    border: none;\n    top: 20px;\n    color: #fff;\n    margin-top: 30px;\n}\ninput[data-v-040e2ab9]::-webkit-input-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]::-moz-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]:-ms-input-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]::-ms-input-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]::placeholder{\n    color: #fff;\n}\nbutton[data-v-040e2ab9]{\n    position: relative;\n    top: 70px;\n    width: 70%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    background: red;\n    padding: 10px;\n    font-size: 18px;\n    margin-top: 5px;\n}\nbutton[data-v-040e2ab9]:focus{\n    box-shadow: 0 0 0 0.2rem rgba(97,189,79,0.5);\n}\n.red[data-v-040e2ab9]:focus{\n     box-shadow: 0 0 0 0.2rem #ea4462b0;\n}\nheader input[data-v-040e2ab9]{\n    color: #fff;\n    width: calc(100% - 20em);\n    position: absolute;\n    top: -25px;\n    background: #ffffff59;\n    left: 40px;\n    -webkit-transform: scale(0.8);\n            transform: scale(0.8);\n}\nheader input[data-v-040e2ab9]::-webkit-input-placeholder{\n    color: #fff;\n}\nheader input[data-v-040e2ab9]::-moz-placeholder{\n    color: #fff;\n}\nheader input[data-v-040e2ab9]:-ms-input-placeholder{\n    color: #fff;\n}\nheader input[data-v-040e2ab9]::-ms-input-placeholder{\n    color: #fff;\n}\nheader input[data-v-040e2ab9]::placeholder{\n    color: #fff;\n}\n.card span[data-v-040e2ab9]{\n    position: relative;\n    top: 81%;\n    padding: 20px;\n    color: #fff;\n    text-shadow: 1px 2px 1px #00000075;\n}\n.cores[data-v-040e2ab9]{\n    position: relative;\n    width: 40px;\n    height: 40px;\n    top: 39px;\n    border-radius: 50%;\n    display: inline-block;\n    cursor: pointer;\n    margin-left: -11px;\n}\n.ativo[data-v-040e2ab9]{\n    border: 7px solid #00000075;\n}\n.error[data-v-040e2ab9]{\n    border: 2px solid var(--red);\n}\n", ""]);
+exports.push([module.i, "\nbody[data-v-040e2ab9], html[data-v-040e2ab9]{\n    overflow-x: hidden;\n    overflow-y: auto;\n}\nheader[data-v-040e2ab9]{\n    position: fixed;\n    width: 100%;\n    background: #0079bf;\n    z-index: 4000;\n    box-shadow: 2px 1px 3px rgba(0,0,0,.40);\n    color: #fff;\n    height: 60px;\n}\nheader a[data-v-040e2ab9]{\n    text-decoration: none;\n    font-weight: bold;\n    top: 20px;\n    position: relative;\n}\nheader .right[data-v-040e2ab9]{\n    float: right;\n    position: absolute;\n    right: 50px\n}\n.center[data-v-040e2ab9]{\n    position: relative;\n    margin: 0px auto;\n    max-width: 800px;\n    padding: 30px;\n    top: 80px;\n    height: 100%;\n}\n.card[data-v-040e2ab9]{\n    width: calc(33.33% - 43px);\n    background: #fff;\n    display: inline-block;\n    height: 160px;\n    margin: 20px;\n    box-shadow: -7px 6px 17px 6px rgba(95, 91, 91, 0.24);\n    border-radius: 4px;\n    cursor: pointer;\n    -webkit-transition: 0.4s cubic-bezier(0.6, -0.28, 0.74, 0.05);\n    transition: 0.4s cubic-bezier(0.6, -0.28, 0.74, 0.05);\n}\n.card h1[data-v-040e2ab9]{\n    -webkit-transition: 0.3s !important;\n    transition: 0.3s !important;\n}\n.dog[data-v-040e2ab9]{\n    background: #fdf5ec;\n    overflow: hidden;\n}\n.card h2[data-v-040e2ab9]{\n    position: relative;\n    left: 50%;\n    color: #000000;\n    top: 50%;\n    background: #ffffff85;\n    width: 100%;\n    text-align: center;\n    -webkit-transform: translate(-50%);\n    transform: translate(-50%);\n    z-index: 5;\n    padding: 30px;\n    font-size: 16px;\n}\n.card img[data-v-040e2ab9]{\n    width: 100%;\n}\n.center h1[data-v-040e2ab9]{\n    padding: 10px;\n}\n.card h1[data-v-040e2ab9]{\n    position: absolute;\n    padding: 6.3% 11%;\n    font-size: 322%;\n}\n.card[data-v-040e2ab9]:hover{\n    box-shadow: -5px -1px 30px 21px rgba(95, 91, 91, 0.24);\n    -webkit-transform: scale(1.1) translateY(-10px);\n            transform: scale(1.1) translateY(-10px);\n}\n@media screen and (max-width: 800px){\n.card[data-v-040e2ab9]{\n       width: calc(50% - 43px);\n       position: relative;\n       left: -20px;\n}\n.card h1[data-v-040e2ab9]{\n        padding: 50px 104px;\n}\n.popup[data-v-040e2ab9]{\n        width: 100%;\n        height: 100%;\n}\n.tuto1[data-v-040e2ab9]{\n        top: 7vw !important;\n        left: 11vw !important;\n}\n}\n@media screen and (max-width: 610px){\n.card[data-v-040e2ab9]{\n       width: 100%;\n       position: relative;\n       left: -20px;\n}\n.card h1[data-v-040e2ab9]{\n    position: relative;\n    text-align: center;\n}\nheader input[data-v-040e2ab9]{\n        width: 45% !important;\n        left: -6px !important;\n        top: -26px !important;\n}\nheader .right[data-v-040e2ab9]{\n        right: 11px !important;\n}\n.tuto1[data-v-040e2ab9]{\n        top: 16vw !important;\n        left: 2vw !important;\n}\n}\n@media screen and (max-width: 587px){\n.tuto1[data-v-040e2ab9]{\n        top: 9vw !important;\n        left: 3vw !important;\n}\n}\n.blue[data-v-040e2ab9]{\n    background: #0079bf;\n}\n.green[data-v-040e2ab9]{\n    background: #6dbf00;\n}\n.red[data-v-040e2ab9]{\n    background: #bf0023;\n}\n.avatar[data-v-040e2ab9]{\n    background: #6dbf00;\n    width: 50px;\n    height: 50px;\n    border-radius: 50%;\n    position: absolute;\n    right: 130px;\n    top: 5px;\n    -webkit-transform: scale(0.8);\n            transform: scale(0.8);\n    cursor: pointer;\n}\n.avatar span[data-v-040e2ab9]{\n    padding: 12px 15px;\n    top: 10px;\n    position: relative;\n    font-size: 166%;\n    font-weight: bold;\n}\n.overlay[data-v-040e2ab9]{\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    z-index: 5000;\n    background: rgba(0,0,0,.40);\n    top: 0%;\n}\n.popup[data-v-040e2ab9]{\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    position: absolute;\n    background: #fff;\n    padding: 40px;\n    box-shadow: -5px -1px 30px 21px rgba(95, 91, 91, 0.24);\n    animation: leaves-data-v-040e2ab9 5s ease-in-out alternate;\n    -webkit-animation: leaves-data-v-040e2ab9 0.4s ease-in-out alternate;\n}\n@-webkit-keyframes shadow-pulse-data-v-040e2ab9\n{\n0% {\n        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);\n}\n100% {\n        box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);\n}\n}\n@keyframes shadow-pulse-data-v-040e2ab9\n{\n0% {\n        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);\n}\n100% {\n        box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);\n}\n}\n@-webkit-keyframes leaves-data-v-040e2ab9 {\n0% {\n        -webkit-transform: translate(-50%, -50%) scale(0);\n                transform: translate(-50%, -50%) scale(0);\n}\n100% {\n        -webkit-transform: translate(-50%, -50%) scale(1);\n                transform: translate(-50%, -50%) scale(1);\n}\n}\n@keyframes leaves-data-v-040e2ab9 {\n0% {\n        -webkit-transform: translate(-50%, -50%) scale(0);\n                transform: translate(-50%, -50%) scale(0);\n}\n100% {\n        -webkit-transform: translate(-50%, -50%) scale(1);\n                transform: translate(-50%, -50%) scale(1);\n}\n}\ninput[data-v-040e2ab9]{\n    width: 100%;\n    background: rgba(0,0,0,.40);\n    padding: 15px;\n    position: relative;\n    margin: 0px;\n    border-radius: 5px;\n    outline: none;\n    border: none;\n    top: 20px;\n    color: #fff;\n    margin-top: 30px;\n}\ninput[data-v-040e2ab9]::-webkit-input-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]::-moz-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]:-ms-input-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]::-ms-input-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]::placeholder{\n    color: #fff;\n}\nbutton[data-v-040e2ab9]{\n    position: relative;\n    top: 70px;\n    width: 70%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    padding: 10px;\n    font-size: 18px;\n    margin-top: 5px;\n}\nbutton[data-v-040e2ab9]:focus{\n    box-shadow: 0 0 0 0.2rem rgba(97,189,79,0.5);\n}\n.red[data-v-040e2ab9]:focus{\n     box-shadow: 0 0 0 0.2rem #ea4462b0;\n}\nheader input[data-v-040e2ab9]{\n    color: #fff;\n    width: calc(100% - 20em);\n    position: absolute;\n    top: -25px;\n    background: #ffffff59;\n    left: 40px;\n    -webkit-transform: scale(0.8);\n            transform: scale(0.8);\n}\nheader input[data-v-040e2ab9]::-webkit-input-placeholder{\n    color: #fff;\n}\nheader input[data-v-040e2ab9]::-moz-placeholder{\n    color: #fff;\n}\nheader input[data-v-040e2ab9]:-ms-input-placeholder{\n    color: #fff;\n}\nheader input[data-v-040e2ab9]::-ms-input-placeholder{\n    color: #fff;\n}\nheader input[data-v-040e2ab9]::placeholder{\n    color: #fff;\n}\n.card span[data-v-040e2ab9]{\n    position: relative;\n    top: 81%;\n    padding: 20px;\n    color: #fff;\n    text-shadow: 1px 2px 1px #00000075;\n}\n.cores[data-v-040e2ab9]{\n    position: relative;\n    width: 40px;\n    height: 40px;\n    top: 39px;\n    border-radius: 50%;\n    display: inline-block;\n    cursor: pointer;\n    margin-left: -11px;\n}\n.ativo[data-v-040e2ab9]{\n    border: 7px solid #00000075;\n}\n.error[data-v-040e2ab9]{\n    border: 2px solid var(--red);\n}\n.overlay_trans[data-v-040e2ab9]{\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    z-index: 5000;\n    background: transparent;\n    top: 0%;\n}\n.tuto[data-v-040e2ab9]{\n    position: absolute;\n    width: 150px;\n    height: auto;\n    background: #fdf5ec;\n    box-shadow: -5px -1px 30px 21px rgba(95, 91, 91, 0.24);\n    borde-radius: 4px;\n    padding: 13px;\n    -webkit-transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);\n    transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);\n}\n.tuto1[data-v-040e2ab9]{\n    left: 11vw;\n    top: 5vw;\n}\n.tring[data-v-040e2ab9]{\n    width: 0;\n    height: 0;\n    border-left: 15px solid transparent;\n    border-right: 15px solid transparent;\n    border-bottom: 15px solid #fdf5ec;\n    position: absolute;\n    top: -15px;\n    left: 40%;\n}\n.tuto button[data-v-040e2ab9]{\n    background: #0079bf;\n    color: #fff;\n    position: relative;\n    -webkit-animation: shadow-pulse-data-v-040e2ab9 1s infinite;\n    animation: shadow-pulse-data-v-040e2ab9 1s infinite;\n    top: 25px;\n}\n.tuto2[data-v-040e2ab9]{\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n}\n.tuto3[data-v-040e2ab9]{\n    top: 130px;\n    right: 56px;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n}\n", ""]);
 
 // exports
 
@@ -20776,6 +20873,22 @@ var render = function() {
             ],
             2
           )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.tuturials.length > 0
+      ? _c("div", { staticClass: "overlay_trans" }, [
+          _c("div", { staticClass: "tuto", class: "tuto" + _vm.whereTuto }, [
+            _c("div", { staticClass: "tring" }),
+            _vm._v(" "),
+            _c(
+              "span",
+              { staticStyle: { position: "relative", "text-align": "center" } },
+              [_vm._v(_vm._s(_vm.tuto.texto))]
+            ),
+            _vm._v(" "),
+            _c("button", { on: { click: _vm.nextTuto } }, [_vm._v("OK")])
+          ])
         ])
       : _vm._e()
   ])
