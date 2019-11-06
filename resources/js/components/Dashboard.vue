@@ -103,6 +103,11 @@
         .card h1{
             padding: 50px 104px;
         }
+
+        .popup{
+            width: 100%;
+            height: 100%;
+        }
     }
 
     @media screen and (max-width: 610px){
@@ -149,6 +154,63 @@
         font-size: 166%;
         font-weight: bold;
     }
+
+    .overlay{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 5000;
+        background: rgba(0,0,0,.40);
+        top: 0%;
+    }
+
+    .popup{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        background: #fff;
+        padding: 40px;
+        box-shadow: -5px -1px 30px 21px rgba(95, 91, 91, 0.24);
+    }
+
+    input{
+        width: 100%;
+        background: rgba(0,0,0,.40);
+        padding: 15px;
+        position: relative;
+        margin: 0px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        top: 20px;
+        color: #fff;
+        margin-top: 30px;
+    }
+
+    input::placeholder{
+        color: #fff;
+    }
+
+    button{
+        position: relative;
+        top: 70px;
+        width: 70%;
+        left: 50%;
+        transform: translate(-50%);
+        background: red;
+        padding: 10px;
+        font-size: 18px;
+        margin-top: 5px;
+    }
+
+    button:focus{
+        box-shadow: 0 0 0 0.2rem rgba(97,189,79,0.5);
+    }
+
+    .red:focus{
+         box-shadow: 0 0 0 0.2rem #ea4462b0;
+    }
 </style>
 
 <template>
@@ -168,7 +230,7 @@
         <h2> Crie seu primeiro card hoje :D </h2>
         <img src="dog.svg"/>
         </div>
-        <div class="card">
+        <div class="card" @click="abrirCriar">
             <h1>
             +
             </h1>
@@ -176,7 +238,7 @@
         <h1>Seus cards</h1>
         <div class="card blue">
 
-        </div>
+        </div>  
         <div class="card green">
 
         </div>
@@ -184,7 +246,17 @@
 
         </div>
     </div>
+
+    <div class="overlay" v-if="criando">
+        <div class="popup">
+            <h1>Que legal, você está criando um card!</h1>
+            <input placeholder="Qual nome do card?">
+            <button class="green">Criar</button>
+            <button @click="fecharCriar" class="red" style="color: #fff;">Cancelar</button>
+        </div>
     </div>
+
+</div>
 </template>
 
 <script>
@@ -195,14 +267,20 @@ export default{
             "name": "Alexandre Silva",
             "email": "admin@nekotodo.com",
             "password": "xande123"
-        }
+            },
+            criando: false
         }
     },
     mounted(){
         console.log(this.user.name)
     },
-    methods(){
-
+    methods:{
+        abrirCriar(){
+            this.criando = true
+        },
+        fecharCriar(){
+            this.criando = false
+        }
     }
 }
 </script>

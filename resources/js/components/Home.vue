@@ -164,7 +164,7 @@
         <div class="center">
         <h1>O NekoTodo permite trabalhar com mais colaboração e ter mais produtividade.</h1>
         <h2>
-            Com os quadros, listas e cartões do Trello, você pode organizar e priorizar seus projetos de um jeito divertido, flexível e gratificante.
+            Com os quadros, listas e cartões do NekoTodo, você pode organizar e priorizar seus projetos de um jeito divertido, flexível e gratificante.
         </h2>
         <div class="input">
         <input type="email" name="" id="" placeholder="E-mail">
