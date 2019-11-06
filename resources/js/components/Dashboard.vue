@@ -1,9 +1,9 @@
 <style scoped>
-
     body, html{
         overflow-x: hidden;
         overflow-y: auto;
     }
+    
 
     header{
         position: fixed;
@@ -121,6 +121,16 @@
         position: relative;
         text-align: center;
         }
+
+        header input{
+            width: 49% !important;
+            left: -6px !important;
+            top: -26px !important;
+        }
+
+        header .right{
+            right: 11px !important;
+        }
     }
 
     .blue{
@@ -211,11 +221,53 @@
     .red:focus{
          box-shadow: 0 0 0 0.2rem #ea4462b0;
     }
+
+    header input{
+        color: #fff;
+        width: calc(100% - 20em);
+        position: absolute;
+        top: -25px;
+        background: #ffffff59;
+        left: 40px;
+        transform: scale(0.8);
+    }
+
+    header input::placeholder{
+        color: #fff;
+    }
+
+    .card span{
+        position: relative;
+        top: 81%;
+        padding: 20px;
+        color: #fff;
+        text-shadow: 1px 2px 1px #00000075;
+    }
+
+    .cores{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        top: 39px;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        margin-left: -11px;
+    }
+    
+    .ativo{
+        border: 7px solid #00000075;
+    }
+
+    .error{
+        border: 2px solid var(--red);
+    }
 </style>
 
 <template>
 <div>
     <header>
+        <input placeholder="Busque"/>
             <div class="right">
                 <div class="avatar">
                     <span>A</span>
@@ -224,7 +276,7 @@
             </div>
     </header>
     <div class="center">
-        <h1>Olá Alexandre</h1>
+        <h1>Olá {{ user.name }}</h1>
         <br>
         <div class="card dog">
         <h2> Crie seu primeiro card hoje :D </h2>
@@ -236,22 +288,18 @@
             </h1>
         </div>
         <h1>Seus cards</h1>
-        <div class="card blue">
-
+        <div class="card blue" v-for="card in cards" v-bind:class="card.color">
+            <span>{{ card.name }}</span>
         </div>  
-        <div class="card green">
-
-        </div>
-        <div class="card red">
-
-        </div>
     </div>
 
     <div class="overlay" v-if="criando">
         <div class="popup">
             <h1>Que legal, você está criando um card!</h1>
-            <input placeholder="Qual nome do card?">
-            <button class="green">Criar</button>
+            <input v-model="criandoCard.name" v-bind:class="{ error: hasError}" placeholder="Qual nome do card?">
+            <div v-for="cor in cores" class="cores" v-bind:class="{ ativo: cor.ativo}" v-bind:style="{ backgroundColor: 'var(--' +cor.cor + ')' }" @click="selectColor(cor)"></div>
+            <br>
+            <button class="green" @click="criarCard">Criar</button>
             <button @click="fecharCriar" class="red" style="color: #fff;">Cancelar</button>
         </div>
     </div>
@@ -268,7 +316,19 @@ export default{
             "email": "admin@nekotodo.com",
             "password": "xande123"
             },
-            criando: false
+            criando: false,
+            cards: [
+                {"name" : "Card One", "color": "blue"},
+                {"name" : "Card Two", "color": "green"},
+                {"name" : "Card Three", "color": "red"},
+            ],
+            criandoCard: {"name" : "", "color": "red"},
+            cores: [
+                {"cor" : "red", "ativo": true},
+                {"cor" : "blue", "ativo": false},
+                {"cor" : "green", "ativo": false}
+            ],
+            hasError: false
         }
     },
     mounted(){
@@ -280,6 +340,27 @@ export default{
         },
         fecharCriar(){
             this.criando = false
+        },
+        criarCard(){
+            if(this.criandoCard.name == "" || this.criandoCard.name == null){
+                this.hasError = true
+            } else{
+                this.cards.push({
+                    "name" : this.criandoCard.name,
+                    "color" : this.criandoCard.color
+                })
+                this.hasError = false
+                this.criando = false
+                this.criandoCard.name = ""
+            }
+        },
+        selectColor(cor){
+            var index = this.cores.indexOf(cor)
+            this.criandoCard.color = this.cores[index].cor
+            for(var i = 0; i < this.cores.length; i++){
+                this.cores[i].ativo = false
+            }
+            this.cores[index].ativo = true
         }
     }
 }

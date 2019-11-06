@@ -2099,6 +2099,54 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2107,7 +2155,32 @@ __webpack_require__.r(__webpack_exports__);
         "email": "admin@nekotodo.com",
         "password": "xande123"
       },
-      criando: false
+      criando: false,
+      cards: [{
+        "name": "Card One",
+        "color": "blue"
+      }, {
+        "name": "Card Two",
+        "color": "green"
+      }, {
+        "name": "Card Three",
+        "color": "red"
+      }],
+      criandoCard: {
+        "name": "",
+        "color": "red"
+      },
+      cores: [{
+        "cor": "red",
+        "ativo": true
+      }, {
+        "cor": "blue",
+        "ativo": false
+      }, {
+        "cor": "green",
+        "ativo": false
+      }],
+      hasError: false
     };
   },
   mounted: function mounted() {
@@ -2119,6 +2192,29 @@ __webpack_require__.r(__webpack_exports__);
     },
     fecharCriar: function fecharCriar() {
       this.criando = false;
+    },
+    criarCard: function criarCard() {
+      if (this.criandoCard.name == "" || this.criandoCard.name == null) {
+        this.hasError = true;
+      } else {
+        this.cards.push({
+          "name": this.criandoCard.name,
+          "color": this.criandoCard.color
+        });
+        this.hasError = false;
+        this.criando = false;
+        this.criandoCard.name = "";
+      }
+    },
+    selectColor: function selectColor(cor) {
+      var index = this.cores.indexOf(cor);
+      this.criandoCard.color = this.cores[index].cor;
+
+      for (var i = 0; i < this.cores.length; i++) {
+        this.cores[i].ativo = false;
+      }
+
+      this.cores[index].ativo = true;
     }
   }
 });
@@ -2156,7 +2252,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\nbody[data-v-040e2ab9], html[data-v-040e2ab9]{\n    overflow-x: hidden;\n    overflow-y: auto;\n}\nheader[data-v-040e2ab9]{\n    position: fixed;\n    width: 100%;\n    background: #0079bf;\n    z-index: 4000;\n    box-shadow: 2px 1px 3px rgba(0,0,0,.40);\n    color: #fff;\n    height: 60px;\n}\nheader a[data-v-040e2ab9]{\n    text-decoration: none;\n    font-weight: bold;\n    top: 20px;\n    position: relative;\n}\nheader .right[data-v-040e2ab9]{\n    float: right;\n    position: absolute;\n    right: 50px\n}\n.center[data-v-040e2ab9]{\n    position: relative;\n    margin: 0px auto;\n    max-width: 800px;\n    padding: 30px;\n    top: 80px;\n    height: 100%;\n}\n.card[data-v-040e2ab9]{\n    width: calc(33.33% - 43px);\n    background: #fff;\n    display: inline-block;\n    height: 160px;\n    margin: 20px;\n    box-shadow: -7px 6px 17px 6px rgba(95, 91, 91, 0.24);\n    border-radius: 4px;\n    cursor: pointer;\n    -webkit-transition: 0.4s cubic-bezier(0.6, -0.28, 0.74, 0.05);\n    transition: 0.4s cubic-bezier(0.6, -0.28, 0.74, 0.05);\n}\n.card h1[data-v-040e2ab9]{\n    -webkit-transition: 0.3s !important;\n    transition: 0.3s !important;\n}\n.dog[data-v-040e2ab9]{\n    background: #fdf5ec;\n    overflow: hidden;\n}\n.card h2[data-v-040e2ab9]{\n    position: relative;\n    left: 50%;\n    color: #000000;\n    top: 50%;\n    background: #ffffff85;\n    width: 100%;\n    text-align: center;\n    -webkit-transform: translate(-50%);\n    transform: translate(-50%);\n    z-index: 5;\n    padding: 30px;\n    font-size: 16px;\n}\n.card img[data-v-040e2ab9]{\n    width: 100%;\n}\n.center h1[data-v-040e2ab9]{\n    padding: 10px;\n}\n.card h1[data-v-040e2ab9]{\n    position: absolute;\n    padding: 6.3% 11%;\n    font-size: 322%;\n}\n.card[data-v-040e2ab9]:hover{\n    box-shadow: -5px -1px 30px 21px rgba(95, 91, 91, 0.24);\n    -webkit-transform: scale(1.1) translateY(-10px);\n            transform: scale(1.1) translateY(-10px);\n}\n@media screen and (max-width: 800px){\n.card[data-v-040e2ab9]{\n       width: calc(50% - 43px);\n       position: relative;\n       left: -20px;\n}\n.card h1[data-v-040e2ab9]{\n        padding: 50px 104px;\n}\n.popup[data-v-040e2ab9]{\n        width: 100%;\n        height: 100%;\n}\n}\n@media screen and (max-width: 610px){\n.card[data-v-040e2ab9]{\n       width: 100%;\n       position: relative;\n       left: -20px;\n}\n.card h1[data-v-040e2ab9]{\n    position: relative;\n    text-align: center;\n}\n}\n.blue[data-v-040e2ab9]{\n    background: #0079bf;\n}\n.green[data-v-040e2ab9]{\n    background: #6dbf00;\n}\n.red[data-v-040e2ab9]{\n    background: #bf0023;\n}\n.avatar[data-v-040e2ab9]{\n    background: #6dbf00;\n    width: 50px;\n    height: 50px;\n    border-radius: 50%;\n    position: absolute;\n    right: 130px;\n    top: 5px;\n    -webkit-transform: scale(0.8);\n            transform: scale(0.8);\n    cursor: pointer;\n}\n.avatar span[data-v-040e2ab9]{\n    padding: 12px 15px;\n    top: 10px;\n    position: relative;\n    font-size: 166%;\n    font-weight: bold;\n}\n.overlay[data-v-040e2ab9]{\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    z-index: 5000;\n    background: rgba(0,0,0,.40);\n    top: 0%;\n}\n.popup[data-v-040e2ab9]{\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    position: absolute;\n    background: #fff;\n    padding: 40px;\n    box-shadow: -5px -1px 30px 21px rgba(95, 91, 91, 0.24);\n}\ninput[data-v-040e2ab9]{\n    width: 100%;\n    background: rgba(0,0,0,.40);\n    padding: 15px;\n    position: relative;\n    margin: 0px;\n    border-radius: 5px;\n    outline: none;\n    border: none;\n    top: 20px;\n    color: #fff;\n    margin-top: 30px;\n}\ninput[data-v-040e2ab9]::-webkit-input-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]::-moz-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]:-ms-input-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]::-ms-input-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]::placeholder{\n    color: #fff;\n}\nbutton[data-v-040e2ab9]{\n    position: relative;\n    top: 70px;\n    width: 70%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    background: red;\n    padding: 10px;\n    font-size: 18px;\n    margin-top: 5px;\n}\nbutton[data-v-040e2ab9]:focus{\n    box-shadow: 0 0 0 0.2rem rgba(97,189,79,0.5);\n}\n.red[data-v-040e2ab9]:focus{\n     box-shadow: 0 0 0 0.2rem #ea4462b0;\n}\n", ""]);
+exports.push([module.i, "\nbody[data-v-040e2ab9], html[data-v-040e2ab9]{\n    overflow-x: hidden;\n    overflow-y: auto;\n}\nheader[data-v-040e2ab9]{\n    position: fixed;\n    width: 100%;\n    background: #0079bf;\n    z-index: 4000;\n    box-shadow: 2px 1px 3px rgba(0,0,0,.40);\n    color: #fff;\n    height: 60px;\n}\nheader a[data-v-040e2ab9]{\n    text-decoration: none;\n    font-weight: bold;\n    top: 20px;\n    position: relative;\n}\nheader .right[data-v-040e2ab9]{\n    float: right;\n    position: absolute;\n    right: 50px\n}\n.center[data-v-040e2ab9]{\n    position: relative;\n    margin: 0px auto;\n    max-width: 800px;\n    padding: 30px;\n    top: 80px;\n    height: 100%;\n}\n.card[data-v-040e2ab9]{\n    width: calc(33.33% - 43px);\n    background: #fff;\n    display: inline-block;\n    height: 160px;\n    margin: 20px;\n    box-shadow: -7px 6px 17px 6px rgba(95, 91, 91, 0.24);\n    border-radius: 4px;\n    cursor: pointer;\n    -webkit-transition: 0.4s cubic-bezier(0.6, -0.28, 0.74, 0.05);\n    transition: 0.4s cubic-bezier(0.6, -0.28, 0.74, 0.05);\n}\n.card h1[data-v-040e2ab9]{\n    -webkit-transition: 0.3s !important;\n    transition: 0.3s !important;\n}\n.dog[data-v-040e2ab9]{\n    background: #fdf5ec;\n    overflow: hidden;\n}\n.card h2[data-v-040e2ab9]{\n    position: relative;\n    left: 50%;\n    color: #000000;\n    top: 50%;\n    background: #ffffff85;\n    width: 100%;\n    text-align: center;\n    -webkit-transform: translate(-50%);\n    transform: translate(-50%);\n    z-index: 5;\n    padding: 30px;\n    font-size: 16px;\n}\n.card img[data-v-040e2ab9]{\n    width: 100%;\n}\n.center h1[data-v-040e2ab9]{\n    padding: 10px;\n}\n.card h1[data-v-040e2ab9]{\n    position: absolute;\n    padding: 6.3% 11%;\n    font-size: 322%;\n}\n.card[data-v-040e2ab9]:hover{\n    box-shadow: -5px -1px 30px 21px rgba(95, 91, 91, 0.24);\n    -webkit-transform: scale(1.1) translateY(-10px);\n            transform: scale(1.1) translateY(-10px);\n}\n@media screen and (max-width: 800px){\n.card[data-v-040e2ab9]{\n       width: calc(50% - 43px);\n       position: relative;\n       left: -20px;\n}\n.card h1[data-v-040e2ab9]{\n        padding: 50px 104px;\n}\n.popup[data-v-040e2ab9]{\n        width: 100%;\n        height: 100%;\n}\n}\n@media screen and (max-width: 610px){\n.card[data-v-040e2ab9]{\n       width: 100%;\n       position: relative;\n       left: -20px;\n}\n.card h1[data-v-040e2ab9]{\n    position: relative;\n    text-align: center;\n}\nheader input[data-v-040e2ab9]{\n        width: 49% !important;\n        left: -6px !important;\n        top: -26px !important;\n}\nheader .right[data-v-040e2ab9]{\n        right: 11px !important;\n}\n}\n.blue[data-v-040e2ab9]{\n    background: #0079bf;\n}\n.green[data-v-040e2ab9]{\n    background: #6dbf00;\n}\n.red[data-v-040e2ab9]{\n    background: #bf0023;\n}\n.avatar[data-v-040e2ab9]{\n    background: #6dbf00;\n    width: 50px;\n    height: 50px;\n    border-radius: 50%;\n    position: absolute;\n    right: 130px;\n    top: 5px;\n    -webkit-transform: scale(0.8);\n            transform: scale(0.8);\n    cursor: pointer;\n}\n.avatar span[data-v-040e2ab9]{\n    padding: 12px 15px;\n    top: 10px;\n    position: relative;\n    font-size: 166%;\n    font-weight: bold;\n}\n.overlay[data-v-040e2ab9]{\n    position: fixed;\n    width: 100%;\n    height: 100%;\n    z-index: 5000;\n    background: rgba(0,0,0,.40);\n    top: 0%;\n}\n.popup[data-v-040e2ab9]{\n    top: 50%;\n    left: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    position: absolute;\n    background: #fff;\n    padding: 40px;\n    box-shadow: -5px -1px 30px 21px rgba(95, 91, 91, 0.24);\n}\ninput[data-v-040e2ab9]{\n    width: 100%;\n    background: rgba(0,0,0,.40);\n    padding: 15px;\n    position: relative;\n    margin: 0px;\n    border-radius: 5px;\n    outline: none;\n    border: none;\n    top: 20px;\n    color: #fff;\n    margin-top: 30px;\n}\ninput[data-v-040e2ab9]::-webkit-input-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]::-moz-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]:-ms-input-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]::-ms-input-placeholder{\n    color: #fff;\n}\ninput[data-v-040e2ab9]::placeholder{\n    color: #fff;\n}\nbutton[data-v-040e2ab9]{\n    position: relative;\n    top: 70px;\n    width: 70%;\n    left: 50%;\n    -webkit-transform: translate(-50%);\n            transform: translate(-50%);\n    background: red;\n    padding: 10px;\n    font-size: 18px;\n    margin-top: 5px;\n}\nbutton[data-v-040e2ab9]:focus{\n    box-shadow: 0 0 0 0.2rem rgba(97,189,79,0.5);\n}\n.red[data-v-040e2ab9]:focus{\n     box-shadow: 0 0 0 0.2rem #ea4462b0;\n}\nheader input[data-v-040e2ab9]{\n    color: #fff;\n    width: calc(100% - 20em);\n    position: absolute;\n    top: -25px;\n    background: #ffffff59;\n    left: 40px;\n    -webkit-transform: scale(0.8);\n            transform: scale(0.8);\n}\nheader input[data-v-040e2ab9]::-webkit-input-placeholder{\n    color: #fff;\n}\nheader input[data-v-040e2ab9]::-moz-placeholder{\n    color: #fff;\n}\nheader input[data-v-040e2ab9]:-ms-input-placeholder{\n    color: #fff;\n}\nheader input[data-v-040e2ab9]::-ms-input-placeholder{\n    color: #fff;\n}\nheader input[data-v-040e2ab9]::placeholder{\n    color: #fff;\n}\n.card span[data-v-040e2ab9]{\n    position: relative;\n    top: 81%;\n    padding: 20px;\n    color: #fff;\n    text-shadow: 1px 2px 1px #00000075;\n}\n.cores[data-v-040e2ab9]{\n    position: relative;\n    width: 40px;\n    height: 40px;\n    top: 39px;\n    border-radius: 50%;\n    display: inline-block;\n    cursor: pointer;\n    margin-left: -11px;\n}\n.ativo[data-v-040e2ab9]{\n    border: 7px solid #00000075;\n}\n.error[data-v-040e2ab9]{\n    border: 2px solid var(--red);\n}\n", ""]);
 
 // exports
 
@@ -20560,45 +20656,94 @@ var render = function() {
   return _c("div", [
     _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "center" }, [
-      _c("h1", [_vm._v("Olá Alexandre")]),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _c("div", { staticClass: "card", on: { click: _vm.abrirCriar } }, [
-        _c("h1", [_vm._v("\r\n            +\r\n            ")])
-      ]),
-      _vm._v(" "),
-      _c("h1", [_vm._v("Seus cards")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "card blue" }),
-      _vm._v(" "),
-      _c("div", { staticClass: "card green" }),
-      _vm._v(" "),
-      _c("div", { staticClass: "card red" })
-    ]),
+    _c(
+      "div",
+      { staticClass: "center" },
+      [
+        _c("h1", [_vm._v("Olá " + _vm._s(_vm.user.name))]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _c("div", { staticClass: "card", on: { click: _vm.abrirCriar } }, [
+          _c("h1", [_vm._v("\r\n            +\r\n            ")])
+        ]),
+        _vm._v(" "),
+        _c("h1", [_vm._v("Seus cards")]),
+        _vm._v(" "),
+        _vm._l(_vm.cards, function(card) {
+          return _c("div", { staticClass: "card blue", class: card.color }, [
+            _c("span", [_vm._v(_vm._s(card.name))])
+          ])
+        })
+      ],
+      2
+    ),
     _vm._v(" "),
     _vm.criando
       ? _c("div", { staticClass: "overlay" }, [
-          _c("div", { staticClass: "popup" }, [
-            _c("h1", [_vm._v("Que legal, você está criando um card!")]),
-            _vm._v(" "),
-            _c("input", { attrs: { placeholder: "Qual nome do card?" } }),
-            _vm._v(" "),
-            _c("button", { staticClass: "green" }, [_vm._v("Criar")]),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "red",
-                staticStyle: { color: "#fff" },
-                on: { click: _vm.fecharCriar }
-              },
-              [_vm._v("Cancelar")]
-            )
-          ])
+          _c(
+            "div",
+            { staticClass: "popup" },
+            [
+              _c("h1", [_vm._v("Que legal, você está criando um card!")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.criandoCard.name,
+                    expression: "criandoCard.name"
+                  }
+                ],
+                class: { error: _vm.hasError },
+                attrs: { placeholder: "Qual nome do card?" },
+                domProps: { value: _vm.criandoCard.name },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.criandoCard, "name", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _vm._l(_vm.cores, function(cor) {
+                return _c("div", {
+                  staticClass: "cores",
+                  class: { ativo: cor.ativo },
+                  style: { backgroundColor: "var(--" + cor.cor + ")" },
+                  on: {
+                    click: function($event) {
+                      return _vm.selectColor(cor)
+                    }
+                  }
+                })
+              }),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "button",
+                { staticClass: "green", on: { click: _vm.criarCard } },
+                [_vm._v("Criar")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "red",
+                  staticStyle: { color: "#fff" },
+                  on: { click: _vm.fecharCriar }
+                },
+                [_vm._v("Cancelar")]
+              )
+            ],
+            2
+          )
         ])
       : _vm._e()
   ])
@@ -20609,6 +20754,8 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("header", [
+      _c("input", { attrs: { placeholder: "Busque" } }),
+      _vm._v(" "),
       _c("div", { staticClass: "right" }, [
         _c("div", { staticClass: "avatar" }, [_c("span", [_vm._v("A")])]),
         _vm._v(" "),
@@ -35971,15 +36118,14 @@ if (token) {
 /*!***********************************************!*\
   !*** ./resources/js/components/Dashboard.vue ***!
   \***********************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Dashboard_vue_vue_type_template_id_040e2ab9_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dashboard.vue?vue&type=template&id=040e2ab9&scoped=true& */ "./resources/js/components/Dashboard.vue?vue&type=template&id=040e2ab9&scoped=true&");
 /* harmony import */ var _Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Dashboard.vue?vue&type=script&lang=js& */ "./resources/js/components/Dashboard.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Dashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _Dashboard_vue_vue_type_style_index_0_id_040e2ab9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Dashboard.vue?vue&type=style&index=0&id=040e2ab9&scoped=true&lang=css& */ "./resources/js/components/Dashboard.vue?vue&type=style&index=0&id=040e2ab9&scoped=true&lang=css&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Dashboard_vue_vue_type_style_index_0_id_040e2ab9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Dashboard.vue?vue&type=style&index=0&id=040e2ab9&scoped=true&lang=css& */ "./resources/js/components/Dashboard.vue?vue&type=style&index=0&id=040e2ab9&scoped=true&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -36011,7 +36157,7 @@ component.options.__file = "resources/js/components/Dashboard.vue"
 /*!************************************************************************!*\
   !*** ./resources/js/components/Dashboard.vue?vue&type=script&lang=js& ***!
   \************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

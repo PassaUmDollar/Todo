@@ -29,6 +29,12 @@
 
         body {font-family: 'Open Sans', sans-serif;}
 
+        :root{
+        --red: #bf0023;
+        --blue: #0079bf;
+        --green: #6dbf00;
+        }
+
         .sucess{
             color: #fff;
             background-color: #61BD4F !important;
