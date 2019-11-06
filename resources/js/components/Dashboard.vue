@@ -182,6 +182,17 @@
         background: #fff;
         padding: 40px;
         box-shadow: -5px -1px 30px 21px rgba(95, 91, 91, 0.24);
+        animation: leaves 5s ease-in-out alternate;
+        -webkit-animation: leaves 0.4s ease-in-out alternate;
+    }
+
+    @keyframes leaves {
+        0% {
+            transform: translate(-50%, -50%) scale(0);
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+        }
     }
 
     input{
