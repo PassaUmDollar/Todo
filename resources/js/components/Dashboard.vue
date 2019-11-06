@@ -186,6 +186,16 @@
         -webkit-animation: leaves 0.4s ease-in-out alternate;
     }
 
+    @keyframes shadow-pulse
+    {
+        0% {
+            box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+        }
+        100% {
+            box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+        }
+    }
+
     @keyframes leaves {
         0% {
             transform: translate(-50%, -50%) scale(0);
@@ -278,7 +288,7 @@
 <template>
 <div>
     <header>
-        <input placeholder="Busque"/>
+        <input placeholder="Busque cards e pessoas"/>
             <div class="right">
                 <div class="avatar">
                     <span>A</span>
@@ -293,7 +303,7 @@
         <h2> Crie seu primeiro card hoje :D </h2>
         <img src="dog.svg"/>
         </div>
-        <div class="card" @click="abrirCriar">
+        <div class="card criar" @click="abrirCriar">
             <h1>
             +
             </h1>
